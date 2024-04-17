@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Teks-Blog
+{% endblock title %}
+ 
+
+{% block content %}
+      <div class="conatiner  m-5">
+          
+          {% for post in posts %}
+             <div class="row col-6-lg col-md-6 m-5 ">
+                   <img src="{{post.image.url}}" alt="" class="">
+                   <h1 class="mt-2">{{post.title}}</h1>
+                   <h3 class="info">{{post.info}}</h3>
+                   <h3><p class="fs-6 mt-2">{{post.description}}</p> </h3>
+                   <h5>{{post.author}}</h5>
+                   <p>{{post.date}}</p>
+             </div>
+          {% endfor %}
+            
+      </div>
+
+{% endblock content %}
+    

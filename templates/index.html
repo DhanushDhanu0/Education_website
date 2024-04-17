@@ -1,0 +1,561 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Teks Academy-Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/letter-t.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Teks Academy
+  * Template URL: https://bootstrapmade.com/Teks Academy-free-education-bootstrap-theme/
+  * Updated: Mar 19 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center sticky-top ">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="static/assets/img/logo.png" alt=""> -->
+        <h1 class=""><span class="text-warning">Teks</span> Academy</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu ">
+        <ul>
+          <li><a 
+            {% if request.path == '/' %}
+              class="nav-link active"
+            {% else %}
+              class="nav-link"
+            {% endif %}
+            href="{% url 'home' %}" class="">Home</a>
+          </li>
+
+          <li class="dropdown has-dropdown"><a href=""><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="nav-link active"><a href="/about">AboutTeks</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              
+            </ul>
+          </li>
+          <li><a 
+                {% if request.path == '/courses' %}
+                class="nav-link active"
+               {% else %}
+                class="nav-link"
+               {% endif %}
+            href="{% url 'courses' %}">Courses</a>
+          </li>
+
+          <li><a 
+            {% if request.path == '/testmonials' %}
+              class="nav-link active"
+            {% else %}
+            class="nav-link"
+            {% endif %}   
+            href="{% url 'testmonials' %}">Testimonials</a></li>
+
+          <li><a 
+            {% if request.path == '/blog' %}
+              class="nav-link active"
+            {% else %}
+            class="nav-link"
+            {% endif %}
+            href="{% url 'blog' %}">Blog</a></li>
+
+          <li><a 
+            {% if request.path == '/signin' %}
+              class="nav-link active"
+            {% else %}
+            class="nav-link"
+            {% endif %}
+              href="{% url 'signin' %}">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-Login m-3 bg-primary p-2 rounded text-light" href="/login">Login</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="static/assets/img/bgimgheader.jpg" alt="" data-aos="fade-in" >
+
+      <div class="container"  data-aos="zoom-out" data-aos-delay="600">
+        <h2  class="">Transferring<br>Experts</h2>
+        <h2 >Knowledge to students</h2>
+        <div class="d-flex mt-4" >
+          <a href="/login" class="btn-get-started">Login</a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="flip-right" data-aos-duration="1000" data-aos-once="false" data-aos-delay="100">
+            <img src="static/assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="flip-up" data-aos-duration="1000" data-aos-once="false" data-aos-delay="200">
+            <h3>Online class room training</h3>
+            <p class="fst-italic">
+                Learn from top-level industry experts to gain more knowledge and better job opportunities.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Curriculum is created on the latest industry trends and on learning objectives that keeps you updated.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Students are evaluated to understand their progress through test and assignments.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Get Internship opportunities, we provide you with industry experience through our internship program</span></li>
+            </ul>
+            <a href="#" class="read-more bg-primary text-light "><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Counts Section -->
+    <section id="counts" class="section counts">
+
+      <div class="container" data-aos="fade-up" data-aos-once="false" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="2000" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">Students</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 ">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">Courses</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">Events</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="">Trainers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Counts Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 " data-aos="fade-up" data-aos-once="false" data-aos-delay="100">
+            <div class="why-box">
+              <h3 class="text-light">Why you choose your Academy?</h3>
+              <p class="text-light">
+                Get placed at reputed organizations, we help you develop all the skills that every industry expects from a candidate.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn bg-light"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="row gy-4" data-aos="fade-up" data-aos-once="false" data-aos-delay="200">
+
+              <div class="col-xl-4">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clipboard-data"></i>
+                  <h4>Well Planned Curriculum</h4>
+                  <p>Curriculum is created on the latest industry trends and on learning objectives that keeps you updated.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-once="false" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-gem"></i>
+                  <h4>Valid International certification</h4>
+                  <p>Get International valid certification which adds value to your CV and helps to get the right job.t</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-once="false" data-aos-delay="400">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-inboxes"></i>
+                  <h4>Interview Prepration</h4>
+                  <p>We provide communication & job ready skills includes CRT to our students to express their skills clearly and professionally, which helps them get job quickly.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+  
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Courses</h2>
+        <p class="">Popular Courses</p>
+      </div><!-- End Section Title -->
+
+        <!--Courses section-->
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="static/assets/img/course-1.jpg" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category text-light">Web Development</p>
+                  
+                </div>
+                <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+                
+              </div>
+            </div>
+          </div> 
+          <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item">
+              <img src="static/assets/img/java-img.jpg" class="img-fluid " alt="..." width="507" height="337">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category text-light">Java Full Stack</p>
+                
+                </div>
+                <p>Java is a widely-used programming language for coding web applications. It has been a popular choice among developers for over two decades, with millions of Java applications in use today. Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself.</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item">
+              <img src="	https://teksacademy.com/assets/img/allcourses/fullstackpython.png" class="img-fluid" alt="..." width="507" height="337">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category text-light ">Python Full Stack</p>
+                  
+                </div>
+
+                <p class="description">Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be used to create a variety of different programs and isn't specialized for any specific problems.</p>
+                
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+        </div>
+
+      </div>
+      
+      <div class="container mb-5">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="static/assets/img/aws-img.png" class="img-fluid" alt="..." width="507" height="337px">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category text-light">AWS Devops</p>
+                </div>
+
+                <p class="description">AWS provides services that help you practice DevOps at your company and that are built first for use with AWS. These tools automate manual tasks, help teams manage complex environments at scale, and keep engineers in control of the high velocity that is enabled by DevOps. Explore our solutions and tooling for DevOps..</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="course-item">
+              <img src="static/assets/img/uiux-img.jpg" class="img-fluid" alt="..." width="482" height="321">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category text-light">UI/UX Desginer</p>
+                
+                </div>
+                <p>Java is a widely-used programming language for coding web applications. It has been a popular choice among developers for over two decades, with millions of Java applications in use today. Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself.</p>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="course-item">
+              <img src="static/assets/img/Data-img.jpg" class="img-fluid" alt="..." width="482" height="321">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category text-light">Data Science</p>
+                  
+                </div>
+
+                <p class="description">Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be used to create a variety of different programs and isn't specialized for any specific problems.</p>
+                
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+        </div>
+
+      </div><!---Ens courses section-->
+
+    </section><!-- /Courses Section -->
+
+    <!-- Trainers Index Section -->
+  
+
+    <section id="features" class="features section mb-5">
+      <H1 class="text-center mb-5 ">Our TEKS Learners Work Here!</H1>
+      <div class="container">
+         
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="bi bi-eye" style="color: #ffbb2c;"></i>
+              <h3><a href="" class="stretched-link">DELL</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="bi bi-infinity" style="color: #5578ff;"></i>
+              <h3><a href="" class="stretched-link">HCL</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="bi bi-mortarboard" style="color: #e80368;"></i>
+              <h3><a href="" class="stretched-link">WIPRO</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <i class="bi bi-nut" style="color: #e361ff;"></i>
+              <h3><a href="" class="stretched-link">TCS</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <i class="bi bi-shuffle" style="color: #47aeff;"></i>
+              <h3><a href="" class="stretched-link">INFOSYS</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+            <div class="features-item">
+              <i class="bi bi-star" style="color: #ffa76e;"></i>
+              <h3><a href="" class="stretched-link">HEXAWARE</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-item">
+              <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
+              <h3><a href="" class="stretched-link">GENPACT</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-item">
+              <i class="bi bi-camera-video" style="color: #4233ff;"></i>
+              <h3><a href="" class="stretched-link">ACCENTURE</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="900">
+            <div class="features-item">
+              <i class="bi bi-command" style="color: #b2904f;"></i>
+              <h3><a href="" class="stretched-link">CAP GEMINI</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="1000">
+            <div class="features-item">
+              <i class="bi bi-dribbble" style="color: #b20969;"></i>
+              <h3><a href="" class="stretched-link">JP MORGAN</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="1100">
+            <div class="features-item">
+              <i class="bi bi-activity" style="color: #ff5828;"></i>
+              <h3><a href="" class="stretched-link">QUCALUCUM</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4 aos-init" data-aos="fade-up" data-aos-delay="1200">
+            <div class="features-item">
+              <i class="bi bi-brightness-high" style="color: #29cc61;"></i>
+              <h3><a href="" class="stretched-link">DIVYA SREE</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative text-dark" >
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/signin" class="logo d-flex align-items-center">
+            <span class="">Teks Academy</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>TEKS Academy serves the best education platform that is crafted based on the extensive research made on learning, course curriculum, learning outcomes, job search, and placement rates in MNCs.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>1800-120-4748</span></p>
+            <p><strong>Email:</strong> <span>support@teksacademy.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/teksacademy/"><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links ">
+            <div class="loc1">
+             <a href="https://maps.app.goo.gl/9JHkGNHtNquaFqYV7" >   
+              <h4>High-Tech city</h4>
+              <img src="static/assets/img/location.png" alt="" width="30" height="30" class="mb-3">
+              <address  class="text-dark"> Plot No. 30, 3rd Floor, Cyber Heights, H. No: 1, 99/64/30, Rohini Layout Rd, Madhapur</address></a>
+            </div>
+            <div class="loc1 ">
+              <a href="https://maps.app.goo.gl/9JHkGNHtNquaFqYV7">
+                <h4 class="mt-5">Kukatpally</h4>
+                <img src="static/assets/img/location.png" alt="" width="30" height="30" class="mb-3">
+                <address class="text-dark"> 2-22-293, Maruti Complex, Plot No 1, near KPHB Metro, Bhagya Nagar Colony, Kukatpally, Hyderabad, Telangana 500085</address>
+              </a>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links ms-5 me-5">
+          <div class="loc1">
+            <a href="">
+              <h4>Ameerpet</h4>
+              <img src="static/assets/img/location.png" alt="" width="30" height="30" class="mb-3">
+              <address  class="text-dark"> 501,5th Floor, Green House Building, next to Passport Office, Ameerpet, Hyderabad, Telangana 500016</address>
+            </a>
+          </div>
+          <div class="loc1">
+           <a href="">
+            <h4>Secunderabad</h4>
+            <img src="static/assets/img/location.png" alt="" width="30" height="30" class="mb-3">
+            <address  class="text-dark"> H.no: 9- 1-127/4, Flat No: 501 & 502 5th Floor, Amsri Faust Building, S.D. Road, Secunderabad, Telangana 500025</address>
+           </a>
+          </div>
+        </div>
+      
+        <div class="col-lg-2 col-md-3 footer-links">
+          <div class="loc1">
+            <a href="">
+              <h4>Dilsukhnagar</h4>
+              <img src="static/assets/img/location.png" alt="" width="30" height="30" class="mb-3">
+              <address  class="text-dark " id="hover"> 5th Floor, Padmavathi Complex, H.No. 16, 11-477/3/2/1, Dilsukh Nagar Main Rd, above Poornima Furnitures, opp. Pillar No 1521, Hyderabad, Telangana 500060</address>
+            </a>
+          </div>
+          
+        </div>
+       
+
+      </div>
+    </div>
+
+   
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
